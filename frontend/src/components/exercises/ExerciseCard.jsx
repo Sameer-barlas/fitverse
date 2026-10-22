@@ -1,10 +1,12 @@
 import { Dumbbell, Clock, Repeat } from 'lucide-react';
 import Badge from '../ui/Badge.jsx';
+import { getExerciseImageUrl } from '../../utils/imageUrl.js';
 
 export default function ExerciseCard({ exercise, onSelect }) {
-  const thumbUrl =
+  const rawThumb =
     exercise.imageUrls?.[0] ||
     (exercise.images?.[0] ? `/exercise-images/${exercise.images[0]}` : null);
+  const thumbUrl = getExerciseImageUrl(rawThumb);
 
   return (
     <button

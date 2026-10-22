@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Play, Dumbbell, Clock, Repeat } from 'lucide-react';
 import Button from '../ui/Button.jsx';
 import Badge from '../ui/Badge.jsx';
+import { getExerciseImageUrl } from '../../utils/imageUrl.js';
 
 function formatPrescription(item) {
   if (item.durationSec) {
@@ -76,9 +77,10 @@ export default function PlanDayAccordion({
         <div className="border-t border-[#1E293B] divide-y divide-[#1E293B]">
           {(day.exercises || []).map((item) => {
             const ex = item.exercise && typeof item.exercise === 'object' ? item.exercise : null;
-            const thumb =
+            const rawThumb =
               ex?.imageUrls?.[0] ||
               (ex?.images?.[0] ? `/exercise-images/${ex.images[0]}` : null);
+            const thumb = getExerciseImageUrl(rawThumb);
 
             return (
               <div

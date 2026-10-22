@@ -1,6 +1,0 @@
-{
-  "name": "Fitverse",
-  "description": "Personal fitness tracker with tailored workout plans, exercise library, logging, and progress stats.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

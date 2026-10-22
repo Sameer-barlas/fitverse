@@ -10,7 +10,7 @@ export function signToken(payload) {
 export function setAuthCookie(res, token) {
   res.cookie('token', token, {
     httpOnly: true,
-    sameSite: 'lax',
+    sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
     secure: env.NODE_ENV === 'production',
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
@@ -19,7 +19,7 @@ export function setAuthCookie(res, token) {
 export function clearAuthCookie(res) {
   res.clearCookie('token', {
     httpOnly: true,
-    sameSite: 'lax',
+    sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
     secure: env.NODE_ENV === 'production',
   });
 }

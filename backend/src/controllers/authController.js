@@ -2,9 +2,8 @@ import bcrypt from 'bcryptjs';
 import { User } from '../models/User.js';
 import { Profile } from '../models/Profile.js';
 import { ApiError } from '../utils/ApiError.js';
-import { signToken, setAuthCookie } from '../utils/tokens.js';
+import { signToken, setAuthCookie, clearAuthCookie } from '../utils/tokens.js';
 import { formatProfileResponse } from '../services/bmiService.js';
-import { env } from '../config/env.js';
 
 // Pre-computed bcrypt cost 12 dummy hash for constant-time comparisons on unknown emails
 const DUMMY_HASH = '$2a$12$e8wV5nJg3q1y2u3i4o5p6u8v9w0x1y2z3a4b5c6d7e8f9g0h1i2j3';
@@ -49,11 +48,7 @@ export async function login(req, res) {
 }
 
 export async function logout(_req, res) {
-  res.clearCookie('token', {
-    httpOnly: true,
-    sameSite: 'lax',
-    secure: env.NODE_ENV === 'production',
-  });
+  clearAuthCookie(res);
 
   res.status(200).json({
     data: {

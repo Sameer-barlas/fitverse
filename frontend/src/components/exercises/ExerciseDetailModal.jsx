@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { X, Dumbbell, CheckCircle2 } from 'lucide-react';
 import Badge from '../ui/Badge.jsx';
+import { getExerciseImageUrl } from '../../utils/imageUrl.js';
 
 export default function ExerciseDetailModal({ exercise, onClose }) {
   const [activeImageIdx, setActiveImageIdx] = useState(0);
@@ -20,11 +21,12 @@ export default function ExerciseDetailModal({ exercise, onClose }) {
 
   if (!exercise) return null;
 
-  const imageUrls =
+  const rawImageUrls =
     exercise.imageUrls?.length > 0
       ? exercise.imageUrls
       : (exercise.images || []).map((img) => `/exercise-images/${img}`);
 
+  const imageUrls = rawImageUrls.map((url) => getExerciseImageUrl(url));
   const currentImg = imageUrls[activeImageIdx] || imageUrls[0] || null;
 
   return (

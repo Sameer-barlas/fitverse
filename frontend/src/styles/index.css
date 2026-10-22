@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0b0f17;
+    --bg-surface: #111827;
+    --bg-elevated: #1f2937;
+    --border-color: #1e293b;
+    --text-primary: #f9fafb;
+    --text-muted: #9ca3af;
+    --accent-emerald: #10b981;
+    --accent-emerald-hover: #059669;
+    --accent-indigo: #6366f1;
+    --bmi-underweight: #38bdf8;
+    --bmi-normal: #10b981;
+    --bmi-overweight: #f59e0b;
+    --bmi-obese: #ef4444;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0b0f17;
+    color: #f9fafb;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}

@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   QuoteLoader Styles — FitVerse
+   Elegant motivational quote loader matching the dark theme (#0B0F17)
+   ========================================================================== */
+
+/* Fullscreen wrapper (used by ProtectedRoute & auth checks) */
+.quote-loader-fullscreen-wrap {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0f17;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+/* Centered container wrapper (used inline within pages) */
+.quote-loader-inline-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* Background floating glow aura */
+.quote-loader-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  max-width: 90vw;
+  height: 20rem;
+  border-radius: 9999px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(16, 185, 129, 0.12) 0%,
+    rgba(99, 102, 241, 0.08) 45%,
+    transparent 72%
+  );
+  pointer-events: none;
+  filter: blur(48px);
+  animation: quoteGlowPulse 6s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes quoteGlowPulse {
+  0% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+/* Central Card */
+.quote-loader-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 44rem;
+  padding: 2.5rem 1.75rem;
+  background: rgba(17, 24, 39, 0.75);
+  border: 1px solid rgba(30, 41, 59, 0.85);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 20px 45px -15px rgba(0, 0, 0, 0.6),
+    0 0 40px -10px rgba(16, 185, 129, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@media (min-width: 640px) {
+  .quote-loader-card {
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* Category Badge Pill */
+.quote-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.quote-category-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Category Color Variants */
+.quote-category-discipline {
+  background-color: rgba(99, 102, 241, 0.12);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.quote-category-motivation {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.quote-category-consistency {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.quote-category-fitness {
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Decorative Opening Quotation Mark */
+.quote-decor-mark {
+  color: rgba(16, 185, 129, 0.35);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.quote-decor-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .quote-decor-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* Animated Quote Text Wrapper */
+.quote-text-container {
+  min-height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .quote-text-container {
+    min-height: 6rem;
+  }
+}
+
+/* Quote Text Typography */
+.quote-text {
+  font-family: 'Poppins', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #f9fafb;
+  margin: 0;
+  letter-spacing: -0.012em;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+@media (min-width: 640px) {
+  .quote-text {
+    font-size: 1.45rem;
+    line-height: 1.55;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quote-text {
+    font-size: 1.55rem;
+  }
+}
+
+/* Transition Animations */
+.quote-state-entering {
+  opacity: 1;
+  transform: translateY(0);
+  animation: quoteSlideUpIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.quote-state-exiting {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+@keyframes quoteSlideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slim Animated Progress Bar (3.5s rotation tracker) */
+.quote-progress-track {
+  width: 100%;
+  max-width: 12rem;
+  height: 3px;
+  background-color: rgba(30, 41, 59, 0.8);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.quote-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #10b981 0%, #34d399 50%, #6366f1 100%);
+  border-radius: 9999px;
+  animation: quoteProgressFill 3.5s linear forwards;
+}
+
+@keyframes quoteProgressFill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Loading Status Row (Pulsing Dots + Label) */
+.quote-status-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.quote-dots-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.quote-pulse-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: #10b981;
+  border-radius: 9999px;
+  animation: quoteDotPulse 1.4s ease-in-out infinite;
+}
+
+.quote-pulse-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.quote-pulse-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes quoteDotPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion Accessibility (prefers-reduced-motion)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .quote-loader-glow {
+    animation: none !important;
+    opacity: 0.65;
+  }
+
+  .quote-state-entering {
+    animation: quoteFadeSimple 0.25s ease forwards !important;
+    transform: none !important;
+  }
+
+  .quote-state-exiting {
+    opacity: 0 !important;
+    transform: none !important;
+  }
+
+  @keyframes quoteFadeSimple {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .quote-progress-bar {
+    animation: none !important;
+    width: 100% !important;
+  }
+
+  .quote-pulse-dot {
+    animation: none !important;
+    opacity: 0.75 !important;
+    transform: none !important;
+  }
+}

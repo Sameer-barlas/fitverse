@@ -1,0 +1,542 @@
+[
+  {
+    "id": "Bodyweight_Squat",
+    "slots": [
+      "squat"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Goblet_Squat",
+    "slots": [
+      "squat"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Squat",
+    "slots": [
+      "squat"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Squats_-_With_Bands",
+    "slots": [
+      "squat"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Plie_Dumbbell_Squat",
+    "slots": [
+      "squat"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Stiff-Legged_Dumbbell_Deadlift",
+    "slots": [
+      "hinge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Band_Good_Morning",
+    "slots": [
+      "hinge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Band_Good_Morning_Pull_Through",
+    "slots": [
+      "hinge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Butt_Lift_Bridge",
+    "slots": [
+      "hinge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Single_Leg_Glute_Bridge",
+    "slots": [
+      "hinge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Kettlebell_One-Legged_Deadlift",
+    "slots": [
+      "hinge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Hyperextensions_With_No_Hyperextension_Bench",
+    "slots": [
+      "hinge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Split_Squat_with_Dumbbells",
+    "slots": [
+      "lunge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Lunges",
+    "slots": [
+      "lunge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Step-up_with_Knee_Raise",
+    "slots": [
+      "lunge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Step_Ups",
+    "slots": [
+      "lunge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Rear_Lunge",
+    "slots": [
+      "lunge"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Incline_Push-Up",
+    "slots": [
+      "push_h"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Bench_Press",
+    "slots": [
+      "push_h"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Bench_Press_-_With_Bands",
+    "slots": [
+      "push_h"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Incline_Dumbbell_Press",
+    "slots": [
+      "push_h"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Pushups",
+    "slots": [
+      "push_h"
+    ],
+    "lowImpact": true,
+    "level": "intermediate"
+  },
+  {
+    "id": "Push-Ups_With_Feet_Elevated",
+    "slots": [
+      "push_h"
+    ],
+    "lowImpact": true,
+    "level": "advanced"
+  },
+  {
+    "id": "Standing_Dumbbell_Press",
+    "slots": [
+      "push_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Seated_Dumbbell_Press",
+    "slots": [
+      "push_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Shoulder_Press_-_With_Bands",
+    "slots": [
+      "push_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Standing_Alternating_Dumbbell_Press",
+    "slots": [
+      "push_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Shoulder_Press",
+    "slots": [
+      "push_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Arnold_Dumbbell_Press",
+    "slots": [
+      "push_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "One-Arm_Dumbbell_Row",
+    "slots": [
+      "pull_h"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Bent_Over_Two-Dumbbell_Row",
+    "slots": [
+      "pull_h"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Incline_Row",
+    "slots": [
+      "pull_h",
+      "pull_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Bent_Over_Two-Dumbbell_Row_With_Palms_In",
+    "slots": [
+      "pull_h",
+      "pull_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Two-Arm_Kettlebell_Row",
+    "slots": [
+      "pull_h"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Chin-Up",
+    "slots": [
+      "pull_v"
+    ],
+    "lowImpact": true,
+    "level": "advanced"
+  },
+  {
+    "id": "Pullups",
+    "slots": [
+      "pull_v"
+    ],
+    "lowImpact": true,
+    "level": "advanced"
+  },
+  {
+    "id": "Straight-Arm_Dumbbell_Pullover",
+    "slots": [
+      "pull_v"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Side_Lateral_Raise",
+    "slots": [
+      "shoulder"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Lateral_Raise_-_With_Bands",
+    "slots": [
+      "shoulder"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Reverse_Flyes",
+    "slots": [
+      "shoulder"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Back_Flyes_-_With_Bands",
+    "slots": [
+      "shoulder"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Bicep_Curl",
+    "slots": [
+      "biceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Hammer_Curls",
+    "slots": [
+      "biceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Concentration_Curls",
+    "slots": [
+      "biceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Cross_Body_Hammer_Curl",
+    "slots": [
+      "biceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Zottman_Curl",
+    "slots": [
+      "biceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Standing_Dumbbell_Triceps_Extension",
+    "slots": [
+      "triceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Tricep_Dumbbell_Kickback",
+    "slots": [
+      "triceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Bench_Dips",
+    "slots": [
+      "triceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Seated_Triceps_Press",
+    "slots": [
+      "triceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Speed_Band_Overhead_Triceps",
+    "slots": [
+      "triceps"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Calf_Raises_-_With_Bands",
+    "slots": [
+      "calves"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Dumbbell_Seated_One-Leg_Calf_Raise",
+    "slots": [
+      "calves"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Standing_Dumbbell_Calf_Raise",
+    "slots": [
+      "calves"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Plank",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true,
+    "tracking": "time"
+  },
+  {
+    "id": "Side_Bridge",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true,
+    "tracking": "time"
+  },
+  {
+    "id": "Dead_Bug",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Crunches",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Reverse_Crunch",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Bent-Knee_Hip_Raise",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Russian_Twist",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Air_Bike",
+    "slots": [
+      "core"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Trail_Running_Walking",
+    "slots": [
+      "cardio"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Bicycling",
+    "slots": [
+      "cardio"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Walking_Treadmill",
+    "slots": [
+      "cardio"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Bicycling_Stationary",
+    "slots": [
+      "cardio"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Jogging_Treadmill",
+    "slots": [
+      "cardio"
+    ],
+    "lowImpact": false
+  },
+  {
+    "id": "Rope_Jumping",
+    "slots": [
+      "cardio"
+    ],
+    "lowImpact": false
+  },
+  {
+    "id": "Childs_Pose",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Hamstring_Stretch",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Kneeling_Hip_Flexor",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Cat_Stretch",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Shoulder_Stretch",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Standing_Gastrocnemius_Calf_Stretch",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Knee_Across_The_Body",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  },
+  {
+    "id": "Hug_Knees_To_Chest",
+    "slots": [
+      "stretch"
+    ],
+    "lowImpact": true
+  }
+]

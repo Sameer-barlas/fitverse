@@ -1,19 +1,26 @@
 import { useScrollAnimation } from '../../hooks/useScrollAnimation.js';
 
 const stats = [
-  { value: '76', suffix: '+', label: 'Home Exercises', color: '#10B981' },
-  { value: '36', suffix: '', label: 'Training Splits', color: '#6366F1' },
-  { value: '5', suffix: 'x', label: 'Days / Week Max', color: '#F59E0B' },
-  { value: '100', suffix: '%', label: 'Free to Use', color: '#EC4899' },
+  { value: '76', suffix: '+', label: 'Home Exercises', color: '#818cf8', glow: 'rgba(99,102,241,0.2)' },
+  { value: '36', suffix: '', label: 'Training Splits', color: '#a78bfa', glow: 'rgba(167,139,250,0.2)' },
+  { value: '5', suffix: 'x', label: 'Days / Week Max', color: '#fb923c', glow: 'rgba(251,146,60,0.2)' },
+  { value: '100', suffix: '%', label: 'Free to Use', color: '#34d399', glow: 'rgba(52,211,153,0.2)' },
 ];
 
 export default function StatsSection() {
   const [ref, visible] = useScrollAnimation(0.1);
 
   return (
-    <section className="relative overflow-hidden py-20">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#10B981]/5 via-[#0B0F17] to-[#6366F1]/5 pointer-events-none" />
+    <section className="relative overflow-hidden py-16">
+      {/* Subtle divider & gradient background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(180deg, rgba(99,102,241,0.04) 0%, rgba(6,8,20,0) 100%)',
+          borderTop: '1px solid rgba(99,102,241,0.1)',
+          borderBottom: '1px solid rgba(99,102,241,0.1)',
+        }}
+      />
 
       <div
         ref={ref}
@@ -23,16 +30,29 @@ export default function StatsSection() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`text-center transition-all duration-700 ${
+              className={`relative text-center p-6 rounded-2xl transition-all duration-700 ${
                 visible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
               }`}
-              style={{ transitionDelay: `${i * 100}ms` }}
+              style={{
+                transitionDelay: `${i * 100}ms`,
+                background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)',
+                border: '1px solid rgba(255,255,255,0.06)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
+              }}
             >
-              <p className="text-5xl sm:text-6xl font-black" style={{ color: stat.color }}>
+              <p
+                className="text-4xl sm:text-5xl font-black tracking-tight"
+                style={{
+                  color: stat.color,
+                  textShadow: `0 0 24px ${stat.glow}`,
+                }}
+              >
                 {stat.value}
-                <span className="text-3xl">{stat.suffix}</span>
+                <span className="text-2xl sm:text-3xl ml-0.5">{stat.suffix}</span>
               </p>
-              <p className="mt-2 text-sm text-[#9CA3AF] font-medium">{stat.label}</p>
+              <p className="mt-2 text-xs sm:text-sm font-medium tracking-wide" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>

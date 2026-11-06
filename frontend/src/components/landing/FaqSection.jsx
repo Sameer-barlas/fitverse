@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
   {
     q: 'Is FitVerse completely free?',
-    a: 'Yes — FitVerse is 100% free. No subscription, no hidden fees, no credit card required. Create an account and start training in under a minute.',
+    a: 'Yes — FitVerse is 100% free. No subscription, no hidden paywalls, no credit card required. Create an account and start training in under a minute.',
   },
   {
     q: 'Do I need any gym equipment?',
@@ -33,29 +33,34 @@ export default function FaqSection() {
   const [headingRef, headingVisible] = useScrollAnimation(0.1);
 
   return (
-    <section className="bg-[#0D1117] py-24">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
+    <section className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-24">
+      {/* Heading */}
+      <div
+        ref={headingRef}
+        className={`text-center mb-14 transition-all duration-700 ${
+          headingVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div
-          ref={headingRef}
-          className={`text-center mb-14 transition-all duration-700 ${
-            headingVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest mb-4"
+          style={{
+            background: 'rgba(99,102,241,0.12)',
+            border: '1px solid rgba(99,102,241,0.3)',
+            color: '#a78bfa',
+          }}
         >
-          <span className="inline-block rounded-full bg-[#6366F1]/10 border border-[#6366F1]/30 px-4 py-1 text-xs font-semibold text-[#6366F1] uppercase tracking-widest mb-4">
-            FAQs
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#F9FAFB]">
-            Frequently Asked Questions
-          </h2>
+          Frequently Asked Questions
         </div>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Got Questions? We’ve Got Answers
+        </h2>
+      </div>
 
-        {/* Accordion */}
-        <div className="flex flex-col gap-3">
-          {faqs.map((faq, i) => (
-            <FaqItem key={faq.q} faq={faq} index={i} />
-          ))}
-        </div>
+      {/* Accordion */}
+      <div className="flex flex-col gap-3.5">
+        {faqs.map((faq, i) => (
+          <FaqItem key={faq.q} faq={faq} index={i} />
+        ))}
       </div>
     </section>
   );
@@ -68,25 +73,41 @@ function FaqItem({ faq, index }) {
   return (
     <div
       ref={ref}
-      className={`rounded-2xl border border-[#1E293B] bg-[#111827] overflow-hidden
-        transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-      style={{ transitionDelay: `${index * 80}ms` }}
+      className={`rounded-2xl overflow-hidden transition-all duration-500 ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}
+      style={{
+        transitionDelay: `${index * 70}ms`,
+        background: open
+          ? 'linear-gradient(145deg, rgba(99,102,241,0.1) 0%, rgba(255,255,255,0.02) 100%)'
+          : 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)',
+        border: open ? '1px solid rgba(99,102,241,0.3)' : '1px solid rgba(255,255,255,0.07)',
+      }}
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-[#1a2235] transition-colors cursor-pointer"
+        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors cursor-pointer"
       >
-        <span className="text-sm font-semibold text-[#F9FAFB]">{faq.q}</span>
-        <ChevronDown
-          className={`h-4 w-4 text-[#6B7280] shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
-        />
+        <span className={`text-sm sm:text-base font-semibold transition-colors ${open ? 'text-violet-300' : 'text-white'}`}>
+          {faq.q}
+        </span>
+        <div
+          className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg transition-transform duration-300"
+          style={{ background: 'rgba(255,255,255,0.05)' }}
+        >
+          <ChevronDown
+            className={`h-4 w-4 transition-transform duration-300 ${open ? 'rotate-180 text-violet-400' : 'text-white/40'}`}
+          />
+        </div>
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           open ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="px-6 pb-5 text-sm text-[#9CA3AF] leading-relaxed">{faq.a}</p>
+        <p className="px-6 pb-5 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          {faq.a}
+        </p>
       </div>
     </div>
   );

@@ -12,15 +12,15 @@ export default function Button({
 }) {
   const variants = {
     primary:
-      'bg-[#10B981] text-[#0B0F17] font-semibold hover:bg-[#059669] hover:text-white focus:ring-[#10B981]',
+      'bg-gradient-to-r from-[#6366F1] to-[#7C3AED] text-white font-semibold hover:from-[#4F46E5] hover:to-[#6D28D9] focus:ring-[#6366F1] shadow-md shadow-indigo-500/20',
     secondary:
-      'bg-[#1F2937] text-[#F9FAFB] border border-[#1E293B] hover:bg-[#374151] focus:ring-[#6366F1]',
+      'bg-white/5 text-[#F9FAFB] border border-white/10 hover:bg-white/10 focus:ring-[#6366F1]',
     indigo:
       'bg-[#6366F1] text-white font-semibold hover:bg-[#4F46E5] focus:ring-[#6366F1]',
     danger:
       'bg-[#EF4444]/15 text-[#EF4444] border border-[#EF4444]/30 hover:bg-[#EF4444] hover:text-white focus:ring-[#EF4444]',
     ghost:
-      'bg-transparent text-[#9CA3AF] hover:text-[#F9FAFB] hover:bg-[#1F2937]',
+      'bg-transparent text-[#9CA3AF] hover:text-[#F9FAFB] hover:bg-white/5',
   };
 
   const sizes = {

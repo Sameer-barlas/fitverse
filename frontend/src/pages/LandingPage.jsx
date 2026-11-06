@@ -17,9 +17,9 @@ export default function LandingPage() {
   const { user } = useAuth();
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0F17] text-[#F9FAFB]">
+    <div className="min-h-screen flex flex-col bg-[#0a0d14] text-[#F9FAFB]">
       {/* ── Sticky Navbar ── */}
-      <header className="border-b border-[#1E293B] bg-[#0B0F17]/90 backdrop-blur sticky top-0 z-30">
+      <header className="border-b border-white/5 bg-[#0a0d14]/90 backdrop-blur sticky top-0 z-30">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
           <div className="flex items-center gap-2.5">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#10B981] text-[#0B0F17]">
@@ -88,7 +88,7 @@ export default function LandingPage() {
       </main>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-[#1E293B] bg-[#0D1117] py-10">
+      <footer className="border-t border-white/5 bg-[#0d1117] py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             {/* Brand */}

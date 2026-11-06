@@ -49,12 +49,12 @@ export default function RegisterPage() {
     <div
       className="min-h-screen flex flex-col items-center justify-center px-4 py-12 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #0a1a14 0%, #0d2318 25%, #0f2d1e 50%, #0a1f16 75%, #071410 100%)',
+        background: 'linear-gradient(135deg, #0a0d14 0%, #0d1117 35%, #111827 65%, #0a0e1a 100%)',
       }}
     >
       {/* Decorative blobs */}
-      <div className="pointer-events-none absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#10B981]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-[#059669]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -left-32 h-80 w-80 rounded-full bg-[#6366F1]/8 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-[#10B981]/8 blur-3xl" />
 
       <div className="w-full max-w-md relative z-10">
         <div className="mb-8 flex flex-col items-center text-center">
@@ -70,7 +70,7 @@ export default function RegisterPage() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-[#10B981]/20 bg-[#0d1f17]/80 backdrop-blur-md p-6 shadow-xl shadow-black/40">
+        <div className="rounded-2xl border border-white/8 bg-[#111827]/80 backdrop-blur-md p-6 shadow-xl shadow-black/40">
           {bannerError && (
             <div className="mb-4">
               <ErrorBanner message={bannerError} />

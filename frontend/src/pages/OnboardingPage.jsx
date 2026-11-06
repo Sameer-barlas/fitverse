@@ -100,7 +100,7 @@ export default function OnboardingPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0B0F17] px-4 py-12">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0a0d14] px-4 py-12">
       <div className="w-full max-w-2xl space-y-6">
         <div className="text-center">
           <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#10B981] text-[#0B0F17]">

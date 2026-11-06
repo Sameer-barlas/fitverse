@@ -4,7 +4,7 @@ import Button from '../components/ui/Button.jsx';
 
 export default function NotFoundPage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0B0F17] px-4 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#0a0d14] px-4 text-center">
       <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#111827] border border-[#1E293B] text-[#10B981]">
         <Compass className="h-7 w-7" />
       </div>

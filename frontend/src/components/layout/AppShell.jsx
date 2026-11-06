@@ -38,14 +38,14 @@ export default function AppShell() {
     <div
       className="min-h-screen text-[#F9FAFB] flex flex-col lg:flex-row"
       style={{
-        background: 'linear-gradient(160deg, #060f0a 0%, #081510 40%, #0a1a12 70%, #060e09 100%)',
+        background: 'linear-gradient(135deg, #0a0d14 0%, #0d1117 30%, #0f1623 60%, #0a0e1a 100%)',
       }}
     >
       {/* ── Desktop Sidebar (≥ 1024px) ── */}
       <aside
         className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 z-30 border-r border-white/5"
         style={{
-          background: 'linear-gradient(180deg, #0a1f15 0%, #071410 100%)',
+          background: 'linear-gradient(180deg, #111827 0%, #0d1117 100%)',
           boxShadow: '4px 0 24px rgba(0,0,0,0.4)',
         }}
       >
@@ -128,7 +128,7 @@ export default function AppShell() {
       <header
         className="lg:hidden flex items-center justify-between px-4 h-14 sticky top-0 z-30 border-b border-white/5"
         style={{
-          background: 'linear-gradient(90deg, #0a1f15 0%, #071410 100%)',
+          background: 'linear-gradient(90deg, #111827 0%, #0d1117 100%)',
           backdropFilter: 'blur(12px)',
         }}
       >
@@ -167,7 +167,7 @@ export default function AppShell() {
       <nav
         className="lg:hidden fixed bottom-0 inset-x-0 z-30 border-t border-white/5"
         style={{
-          background: 'linear-gradient(180deg, #0a1f15 0%, #071410 100%)',
+          background: 'linear-gradient(180deg, #111827 0%, #0d1117 100%)',
           backdropFilter: 'blur(16px)',
         }}
       >

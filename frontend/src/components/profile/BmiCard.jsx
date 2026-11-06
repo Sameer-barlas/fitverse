@@ -33,9 +33,11 @@ export default function BmiCard({ profile }) {
 
   return (
     <div
-      className="rounded-2xl border border-white/5 shadow-lg overflow-hidden h-full"
+      className="rounded-3xl overflow-hidden h-full"
       style={{
-        background: 'linear-gradient(135deg, #0d2318 0%, #0a1612 100%)',
+        background: 'linear-gradient(145deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)',
+        border: '1px solid rgba(255,255,255,0.08)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.25)',
       }}
     >
       <div className="p-5 sm:p-6 space-y-5 h-full flex flex-col">

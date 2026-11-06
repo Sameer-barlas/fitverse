@@ -38,25 +38,38 @@ export default function AppShell() {
     <div
       className="min-h-screen text-[#F9FAFB] flex flex-col lg:flex-row"
       style={{
-        background: 'linear-gradient(135deg, #0a0d14 0%, #0d1117 30%, #0f1623 60%, #0a0e1a 100%)',
+        background: 'linear-gradient(135deg, #060814 0%, #0a0d1a 40%, #080c18 70%, #060812 100%)',
       }}
     >
       {/* ── Desktop Sidebar (≥ 1024px) ── */}
       <aside
-        className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 z-30 border-r border-white/5"
+        className="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 z-30"
         style={{
-          background: 'linear-gradient(180deg, #111827 0%, #0d1117 100%)',
-          boxShadow: '4px 0 24px rgba(0,0,0,0.4)',
+          background: 'linear-gradient(180deg, #0d1025 0%, #090d1e 50%, #07091a 100%)',
+          borderRight: '1px solid rgba(99,102,241,0.12)',
+          boxShadow: '4px 0 32px rgba(0,0,0,0.5)',
         }}
       >
         {/* Logo */}
-        <div className="flex items-center gap-3 px-6 h-16 border-b border-white/5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[#10B981] to-[#059669] text-white shadow-md shadow-[#10B981]/30">
-            <Dumbbell className="h-5 w-5" />
+        <div
+          className="flex items-center gap-3 px-6 h-16"
+          style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}
+        >
+          <div
+            className="flex h-9 w-9 items-center justify-center rounded-xl text-white shadow-md"
+            style={{
+              background: 'linear-gradient(135deg, #6366f1 0%, #7c3aed 100%)',
+              boxShadow: '0 4px 16px rgba(99,102,241,0.4)',
+            }}
+          >
+            <Dumbbell className="h-4.5 w-4.5" />
           </div>
           <div>
-            <span className="text-lg font-bold tracking-tight text-[#F9FAFB]">FitVerse</span>
-            <div className="text-[10px] text-[#10B981]/70 font-semibold tracking-widest uppercase -mt-0.5">
+            <span className="text-lg font-bold tracking-tight text-white">FitVerse</span>
+            <div
+              className="text-[10px] font-bold tracking-widest uppercase -mt-0.5"
+              style={{ color: 'rgba(167,139,250,0.7)' }}
+            >
               Pro Fitness
             </div>
           </div>
@@ -71,25 +84,43 @@ export default function AppShell() {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                  `flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? 'bg-[#10B981]/15 text-[#10B981] border border-[#10B981]/20 shadow-sm'
-                      : 'text-[#9CA3AF] hover:bg-white/5 hover:text-[#F9FAFB] border border-transparent'
+                      ? 'text-white'
+                      : 'text-white/40 hover:text-white/80 hover:bg-white/4'
                   }`
+                }
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(124,58,237,0.12) 100%)',
+                        border: '1px solid rgba(99,102,241,0.25)',
+                        boxShadow: '0 2px 12px rgba(99,102,241,0.15)',
+                      }
+                    : { border: '1px solid transparent' }
                 }
               >
                 {({ isActive }) => (
                   <>
                     <div
-                      className={`flex h-8 w-8 items-center justify-center rounded-lg transition-all ${
-                        isActive ? 'bg-[#10B981]/20' : 'bg-transparent'
-                      }`}
+                      className="flex h-8 w-8 items-center justify-center rounded-lg transition-all"
+                      style={
+                        isActive
+                          ? { background: 'rgba(99,102,241,0.25)' }
+                          : {}
+                      }
                     >
-                      <Icon className="h-4 w-4 shrink-0" />
+                      <Icon
+                        className="h-4 w-4 shrink-0 transition-all"
+                        style={{ color: isActive ? '#a78bfa' : undefined }}
+                      />
                     </div>
-                    <span>{item.label}</span>
+                    <span className="flex-1">{item.label}</span>
                     {isActive && (
-                      <div className="ml-auto h-1.5 w-1.5 rounded-full bg-[#10B981]" />
+                      <div
+                        className="h-1.5 w-1.5 rounded-full"
+                        style={{ background: '#a78bfa', boxShadow: '0 0 6px #a78bfa' }}
+                      />
                     )}
                   </>
                 )}
@@ -99,16 +130,31 @@ export default function AppShell() {
         </nav>
 
         {/* User + Logout */}
-        <div className="p-4 border-t border-white/5">
+        <div
+          className="p-4"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}
+        >
           {user && (
-            <div className="mb-3 px-3 py-2 rounded-xl bg-white/5 border border-white/5">
+            <div
+              className="mb-3 px-3 py-2.5 rounded-xl"
+              style={{
+                background: 'rgba(99,102,241,0.08)',
+                border: '1px solid rgba(99,102,241,0.12)',
+              }}
+            >
               <div className="flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#10B981] to-[#059669] text-white text-xs font-bold shrink-0">
+                <div
+                  className="flex h-8 w-8 items-center justify-center rounded-full text-white text-xs font-bold shrink-0"
+                  style={{
+                    background: 'linear-gradient(135deg, #6366f1, #7c3aed)',
+                    boxShadow: '0 2px 10px rgba(99,102,241,0.4)',
+                  }}
+                >
                   {user.name?.charAt(0)?.toUpperCase() || 'U'}
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs font-semibold text-[#F9FAFB] truncate">{user.name}</p>
-                  <p className="text-[11px] text-[#9CA3AF] truncate">{user.email}</p>
+                  <p className="text-xs font-semibold text-white/90 truncate">{user.name}</p>
+                  <p className="text-[11px] text-white/35 truncate">{user.email}</p>
                 </div>
               </div>
             </div>
@@ -116,7 +162,18 @@ export default function AppShell() {
           <button
             type="button"
             onClick={handleLogout}
-            className="flex w-full items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm font-medium text-[#9CA3AF] hover:bg-[#EF4444]/10 hover:text-[#EF4444] transition-colors cursor-pointer border border-transparent hover:border-[#EF4444]/20"
+            className="flex w-full items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer"
+            style={{ color: 'rgba(255,255,255,0.4)', border: '1px solid transparent' }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(239,68,68,0.1)';
+              e.currentTarget.style.color = '#f87171';
+              e.currentTarget.style.border = '1px solid rgba(239,68,68,0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '';
+              e.currentTarget.style.color = 'rgba(255,255,255,0.4)';
+              e.currentTarget.style.border = '1px solid transparent';
+            }}
           >
             <LogOut className="h-4 w-4" />
             <span>Log Out</span>
@@ -126,23 +183,31 @@ export default function AppShell() {
 
       {/* ── Mobile Top Header (< 1024px) ── */}
       <header
-        className="lg:hidden flex items-center justify-between px-4 h-14 sticky top-0 z-30 border-b border-white/5"
+        className="lg:hidden flex items-center justify-between px-4 h-14 sticky top-0 z-30"
         style={{
-          background: 'linear-gradient(90deg, #111827 0%, #0d1117 100%)',
-          backdropFilter: 'blur(12px)',
+          background: 'rgba(9,13,30,0.95)',
+          borderBottom: '1px solid rgba(99,102,241,0.12)',
+          backdropFilter: 'blur(16px)',
         }}
       >
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#10B981] to-[#059669] text-white shadow-sm shadow-[#10B981]/30">
+        <div className="flex items-center gap-2.5">
+          <div
+            className="flex h-8 w-8 items-center justify-center rounded-lg text-white"
+            style={{
+              background: 'linear-gradient(135deg, #6366f1, #7c3aed)',
+              boxShadow: '0 2px 10px rgba(99,102,241,0.4)',
+            }}
+          >
             <Dumbbell className="h-4 w-4" />
           </div>
-          <span className="font-bold text-base text-[#F9FAFB]">FitVerse</span>
+          <span className="font-bold text-base text-white">FitVerse</span>
         </div>
         <button
           type="button"
           onClick={handleLogout}
           aria-label="Log Out"
-          className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-medium text-[#9CA3AF] hover:bg-white/5 hover:text-[#EF4444] cursor-pointer transition-colors"
+          className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors cursor-pointer"
+          style={{ color: 'rgba(255,255,255,0.4)' }}
         >
           <LogOut className="h-4 w-4" />
           <span>Logout</span>
@@ -151,12 +216,15 @@ export default function AppShell() {
 
       {/* ── Main Content Wrapper ── */}
       <div className="flex-1 lg:pl-64 flex flex-col min-h-screen pb-20 lg:pb-0">
-        <main className="flex-1 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <main className="flex-1 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-7">
           <Outlet />
         </main>
 
-        <footer className="border-t border-white/5 py-4 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-[1280px] mx-auto text-center text-xs text-[#9CA3AF]/60">
+        <footer
+          className="py-4 px-4 sm:px-6 lg:px-8"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}
+        >
+          <div className="max-w-[1280px] mx-auto text-center text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
             FitVerse provides general fitness information and is not medical advice. Consult a
             physician before starting a new exercise program.
           </div>
@@ -165,10 +233,11 @@ export default function AppShell() {
 
       {/* ── Mobile Bottom Tab Bar (< 1024px) ── */}
       <nav
-        className="lg:hidden fixed bottom-0 inset-x-0 z-30 border-t border-white/5"
+        className="lg:hidden fixed bottom-0 inset-x-0 z-30"
         style={{
-          background: 'linear-gradient(180deg, #111827 0%, #0d1117 100%)',
-          backdropFilter: 'blur(16px)',
+          background: 'rgba(9,13,30,0.97)',
+          borderTop: '1px solid rgba(99,102,241,0.12)',
+          backdropFilter: 'blur(20px)',
         }}
       >
         <div className="grid grid-cols-6 h-16">
@@ -180,19 +249,21 @@ export default function AppShell() {
                 to={item.to}
                 className={({ isActive }) =>
                   `flex flex-col items-center justify-center gap-0.5 text-[10px] font-medium transition-all duration-200 relative ${
-                    isActive ? 'text-[#10B981]' : 'text-[#9CA3AF]/70 hover:text-[#F9FAFB]'
+                    isActive ? 'text-violet-400' : 'text-white/30 hover:text-white/60'
                   }`
                 }
               >
                 {({ isActive }) => (
                   <>
                     {isActive && (
-                      <div className="absolute top-0 inset-x-0 h-0.5 rounded-b bg-[#10B981]" />
+                      <div
+                        className="absolute top-0 inset-x-2 h-0.5 rounded-b"
+                        style={{ background: 'linear-gradient(90deg, #6366f1, #a78bfa)' }}
+                      />
                     )}
                     <div
-                      className={`flex h-8 w-8 items-center justify-center rounded-xl transition-all ${
-                        isActive ? 'bg-[#10B981]/15' : ''
-                      }`}
+                      className="flex h-8 w-8 items-center justify-center rounded-xl transition-all"
+                      style={isActive ? { background: 'rgba(99,102,241,0.15)' } : {}}
                     >
                       <Icon className="h-4 w-4" />
                     </div>

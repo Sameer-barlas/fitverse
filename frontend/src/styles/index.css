@@ -2,10 +2,10 @@
 
 @layer base {
   :root {
-    --bg-primary: #0b0f17;
-    --bg-surface: #111827;
-    --bg-elevated: #1f2937;
-    --border-color: #1e293b;
+    --bg-primary: #060f0a;
+    --bg-surface: #0d2318;
+    --bg-elevated: #0f2d1e;
+    --border-color: rgba(255, 255, 255, 0.06);
     --text-primary: #f9fafb;
     --text-muted: #9ca3af;
     --accent-emerald: #10b981;
@@ -19,11 +19,29 @@
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #0b0f17;
+    background: linear-gradient(160deg, #060f0a 0%, #081510 40%, #0a1a12 70%, #060e09 100%);
+    background-attachment: fixed;
     color: #f9fafb;
+    min-height: 100vh;
   }
 
   .font-mono-num {
     font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Smooth scrollbar for webkit */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.25);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.45);
   }
 }
